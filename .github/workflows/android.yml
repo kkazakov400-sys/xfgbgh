@@ -1,0 +1,11 @@
+name: Android Build
+on: [push]
+jobs: 
+ buind:
+  runs-on: unbuntu-latest
+  steps:
+   - uses: actions/checkout@v1.4.0
+   - name: Build APK
+   uses: maierj/fastlane-action@v1.4.0
+   with:
+    lane: android build
